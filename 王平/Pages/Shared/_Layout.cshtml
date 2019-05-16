@@ -1,172 +1,55 @@
 ﻿<!DOCTYPE html>
-    <html>
-
-
-
-
-
-
-    <head>
-        @*<script>
-                var wx = document.getElementById(`wx`),
-
-                    childwx = wx.childElementCount[0],
-
-                    wf = document.getElementById(`wf`),
-                    childwf = wf.childElementCount[0],
-
-                    lc = document.getElementById(`lc`),
-                    childlc = lc.childElementCount[0],
-
-                    lz = document.getElementById(`lz`),
-                    childlz = lz.childElementCount[0];
-
-
-                wx.onmousemove = function () {
-                    console.log(`四次`)
-                }
-                lc.onmousemove = function () {
-                    console.log(`五次`)
-                }
-                wf.onmousemove = function () {
-                    console.log(`三次`)
-                }
-                lz.onmousemove = function () {
-                    console.log(`二次`)
-                }
-            </script>*@
-
-
-
+<html>
+<head>
 
 </head>
 <body>
+    <script src="~/lib/jquery/dist/jquery.js"></script>
+    <form>
+        <div id="form">
+            <label>
+                邀请人：（* 必填，没有邀请人）<br />
+                <input type="text" name="name" value="" />
+            </label><br />
+            <label>
+                邀请码：（* 必填）<br />
+                <input type="text" name="name" value="" />
+            </label><br />
+            <label>
+                用户名：（* 必填）<br />
+                <input type="text" name="nickname" value="" />
+            </label><br />
 
-
-
-
-    @*<div id="wx">
-
-            文轩真帅
+            <label>
+                密码：（* 必填））<br />
+                <input type="password" name="name" value="" />
+            </label><br />
+            <label>
+                验证密码：（* 必填））<br />
+                <input type="password" name="name" value="" />
+            </label><br />
+            <label>
+                验证码：（* 必填））<br />
+                <input type="text" name="name" value="" />
+            </label><br />
+            <button>提交</button>
+            <button>重置</button>
         </div>
-
-        <div id="lc">
-            老程真帅
+        <div id="and">
+            <input type="checkbox" />1
+            <input type="checkbox" />2
+            <input type="checkbox" />3
+            <input type="checkbox" class="checkAll" />全选
         </div>
-
-        <div id="lz">
-            老赵真帅
-        </div>
-        <div id="wf">
-
-            王枫真帅
-        </div>*@
-
-    @*<script>
-        for (var i = 2; i < 100; i++) {
-            var fa = true;
-            for (var j = 2; j < i; j++) {
-                if (i % j === 0) {
-                    fa = false;
-
-                }
-
-            } if (fa) {
-                console.log(i);
-
-            }
-        }*@
-
-
-
-    @*<script>
-        <h1>HTML DOM示范</h1>
-            <div>
-                <p>HTML DOM 定义了访问和操作 HTML 文档的标准方法。</p>
-                <p>
-                    DOM 将 HTML 文档表达为树结构。见：
-                    <a href="http://www.w3school.com.cn/htmldom/index.asp" target="_blank">W3SCHOOL教程</a>
-                    。
-                </p>
-                <p>
-                    但我们认为，将其图示为
-                    <strong style="color:darkblue">嵌套结构</strong>
-                    过渡更容易理解。
-                </p>
-                <img src="~/images/HTMLDOM树.png" alt="HTML DOM 嵌套图例" />
-            </div>
-            <form>
-                <label>用户名：<input type="text" name="username" /></label><br />
-                <label>密码：<input type="password" name="password" /></label><br />
-                <label>确认密码：<input type="password" /></label><br />
-                <div>
-                    <label>性别：</label>
-                    <label><input type="radio" value="female" name="gender" />男</label>
-                    <label><input type="radio" value="male" name="gender" />女</label>
-                </div>
-                <div>
-                    <label>来自：</label>
-                    <select name="province">
-                        <option value="js">江苏</option>
-                        <option value="hn">湖南</option>
-                        <option value="hlj">黑龙江</option>
-                        <option value="hb">湖北</option>
-                    </select>
-                </div>
-                <div>
-                    <label>自我介绍：</label><br />
-                    <textarea name="self-introduction"></textarea>
-                </div>
-                <input type="submit" value="提交" />
-                <input type="reset" value="重置" />
-                <label><input type="checkbox" id="remember" />记住我</label>
-            </form>
-    </script>
-    <script>
-
-                for (var i = 0; i < 100; i++) {
-                var fa = true;
-                for (var j = 0; j < i; j++) {
-                    if (j % i === 0) {
-                        fa = false
-
-                    }
-
-                } console.log(i)
-
-            }
-
-
-
-            REPLICATE(string, n)
-            REPLICATE()*@
-
-
-
-
-
-    @*</script>*@
-
-
-
-
-
-
-
-
+    </form>
     @RenderBody()
+    <a href="#">编程开发语言</a>
+    <a href="#">c#</a>
+    <a href="#">JAVA</a>
+    <a href="#">工具软件</a>
+    <a href="#">Javascript</a>
+    <a href="#">html</a>
+
 
 </body>
-
-
-
-
-
-
-
-
-
-
-
-
 </html>
