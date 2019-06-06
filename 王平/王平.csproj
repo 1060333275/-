@@ -5,24 +5,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <None Include="wwwroot\打地鼠\一下出现.wav" />
-    <None Include="wwwroot\打地鼠\倒计时123.wav" />
-    <None Include="wwwroot\打地鼠\哇喔.wav" />
-    <None Include="wwwroot\打地鼠\土堆.png" />
-    <None Include="wwwroot\打地鼠\地雷.png" />
-    <None Include="wwwroot\打地鼠\坏地鼠.png" />
-    <None Include="wwwroot\打地鼠\弹簧.wav" />
-    <None Include="wwwroot\打地鼠\敲打.wav" />
-    <None Include="wwwroot\打地鼠\晕地鼠.png" />
-    <None Include="wwwroot\打地鼠\爆炸.mp3" />
-    <None Include="wwwroot\打地鼠\爆炸.png" />
-    <None Include="wwwroot\打地鼠\背景.jpg" />
-    <None Include="wwwroot\打地鼠\萌地鼠.png" />
-    <None Include="wwwroot\打地鼠\锤子.png" />
-    <None Include="wwwroot\打地鼠\鼠标锤子.png" />
-  </ItemGroup>
-
-  <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.App" />
     <PackageReference Include="Microsoft.AspNetCore.Razor.Design" Version="2.1.2" PrivateAssets="All" />
   </ItemGroup>

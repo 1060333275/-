@@ -1,55 +1,79 @@
 ﻿<!DOCTYPE html>
 <html>
-<head>
 
-</head>
+
+
+
+
+
+
 <body>
-    <script src="~/lib/jquery/dist/jquery.js"></script>
-    <form>
-        <div id="form">
-            <label>
-                邀请人：（* 必填，没有邀请人）<br />
-                <input type="text" name="name" value="" />
-            </label><br />
-            <label>
-                邀请码：（* 必填）<br />
-                <input type="text" name="name" value="" />
-            </label><br />
-            <label>
-                用户名：（* 必填）<br />
-                <input type="text" name="nickname" value="" />
-            </label><br />
+   
+    <div id="wx">
 
-            <label>
-                密码：（* 必填））<br />
-                <input type="password" name="name" value="" />
-            </label><br />
-            <label>
-                验证密码：（* 必填））<br />
-                <input type="password" name="name" value="" />
-            </label><br />
-            <label>
-                验证码：（* 必填））<br />
-                <input type="text" name="name" value="" />
-            </label><br />
-            <button>提交</button>
-            <button>重置</button>
-        </div>
-        <div id="and">
-            <input type="checkbox" />1
-            <input type="checkbox" />2
-            <input type="checkbox" />3
-            <input type="checkbox" class="checkAll" />全选
-        </div>
-    </form>
-    @RenderBody()
-    <a href="#">编程开发语言</a>
-    <a href="#">c#</a>
-    <a href="#">JAVA</a>
-    <a href="#">工具软件</a>
-    <a href="#">Javascript</a>
-    <a href="#">html</a>
+    文轩真帅</div>
+    
+    <div id="lc">
+        老程真帅
+    </div>
+    
+    <div id="lz">
+        老赵真帅
+    </div>
+    <div id="wf">
 
+        王枫真帅
+    </div>
+
+
+        @RenderBody()
 
 </body>
+<head>
+    <script>
+        var wx = document.getElementById(`wx`),
+
+            childwx = wx.childElementCount[0],
+
+            wf = document.getElementById(`wf`),
+            childwf = wf.childElementCount[0],
+
+            lc = document.getElementById(`lc`),
+            childlc = lc.childElementCount[0],
+
+            lz = document.getElementById(`lz`),
+            childlz = lz.childElementCount[0];
+            
+
+        wx.onmousemove = function(){
+            console.log(`四次`)
+        }
+        lc.onmousemove = function (){
+            console.log(`五次`)
+        }
+        wf.onmousemove = function () {
+            console.log(`三次`)
+        }
+        lz.onmousemove = function(){
+           console.log(`二次`)
+        }
+    </script>
+
+
+
+
+</head>
+
+
+
+
+
+
+
+
+
+
+
+
+
 </html>
