@@ -22,11 +22,11 @@ namespace _0._0
             Graphics g = Graphics.FromImage(img);
             g.Clear(Color.Yellow);
             g.DrawString(str, new Font("黑体", 50), new SolidBrush(Color.Red), new PointF(wide/8, tall/6));
-            for (int i = 0; i < 1000; i++)
+            for (int i = 0; i < tall*10; i++)
             {
                 img.SetPixel(n.Next(wide), n.Next(tall), Color.Black);
             }
-            for (int i = 0; i < 10; i++)
+            for (int i = 0; i < tall/10; i++)
             {
                 g.DrawLine(new Pen(Color.Black), s.Next(wide), s.Next(tall), n.Next(wide), n.Next(tall));
             }
