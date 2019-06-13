@@ -16,9 +16,9 @@ namespace ConsoleApp1
             //Node<string> wx = new Node<string> { Name = "文轩" };
             //Node<string> wf = new Node<string> { Name = "王枫" };
             //student.Add(lc);
-            //student.Add(wx);
-            //student.Add(wf);
 
+            //student.Add(wx);
+            //student.Add(wf);                                                 
 
         }
 
