@@ -54,35 +54,8 @@ public class Node<T>
         _count++;
     }
 }
-interface IBubblingSort
-{
-
-
-    void Sort(int Sort);
-}
-interface IClimb
-{
-
-    void Sort();
-
-
-}
 
 
 
-internal class BinarySort : IBubblingSort, IClimb
-{
 
-
-    void IBubblingSort.Sort(int Sort)
-    {
-
-        Console.WriteLine("我是在sort");
-    }
-
-    void IClimb.Sort()
-    {
-        Console.WriteLine("我是在sort");
-    }
-}
 
