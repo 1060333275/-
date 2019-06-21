@@ -16,10 +16,14 @@ namespace _0._0
         {
             //Canvas();
             //Iu();
-            //Users.Bang("1", "wp", "1234");
 
-
-
+            Users wp = new Users
+            {Title= "源栈培训：C#进阶-7：Linq to XML",
+              Name="wp",
+                PassWord="1234",
+                Body = "1212"
+            };wp.Seek("wp");
+           
         }
         static void Canvas()
         {
@@ -70,7 +74,7 @@ namespace _0._0
 
         //生成一个XML文件
         static void Iu()
-      {
+        {
             string body = "body";
             string id = "id";
             string comment = "comment";
@@ -146,33 +150,73 @@ namespace _0._0
             Console.WriteLine(element);
             luckystack.Save(Address);
         }
-     
+
 
 
 
     }
     class Users
     {
-        public static string Address = "C:\\17bang\\luckystack.xml";
-        public static void Articles(string id,string name,string password,string body)
+        public string Title { get; set; }
+        public  string Body { get; set; }
+        public string Name { get; set; }
+        public  string PassWord { get; set;}
+        public  string Address = "C:\\17bang\\luckystack.xml";
+        public  XElement Articles()
         {
-            XElement luckystack = new XElement(
-                     "articles", new XElement("article", 
-                     new XElement("id", id ),
-                     new XElement("name", name ),
-                      new XElement("password", password ), 
-                      new XElement("body", body )));
-            Console.WriteLine(luckystack);
-            luckystack.Save(Address);
+            XElement luckystack = new XElement("articles"
+             );
+            return luckystack;
         }
-        public static void Seek(string name )
+        public  void IssueAnArticle(string name, string passWord)
         {
+            DateTime Time = new DateTime();
+            if (name == Name & passWord == PassWord)
+            {
+                XElement articles = Articles();
+                articles.Add(new XElement("article",
+                    new XElement("title", Title),
+                    new XElement("name", name),
+                    new XElement("body", Body),
+                    new XElement("DateTime", Time)));
+                articles.Save(Address);
+                Console.WriteLine(articles);
+            }
+            else
+            {
+                //throw ;
+            }
+                
+        }
+        public void Comment(string name)
+        {
+            DateTime Time = new DateTime();
+
+            XElement Comment = Articles();
+            Comment.Add(new XElement("comment", $"{name}:", Body),
+                new XElement("DateTime", Time));
+            Comment.Save(Address);
+            Console.WriteLine(Comment);
+        }
+
+
+        public void Seek(string name)
+        {
+            int i = 0;
             XElement element = XElement.Load(Address);
             var essay = from x in element.Descendants()
                         where x.Name == "article"
                         where x.Value.Contains(name)
                         select x;
+            foreach (var item in essay)
+            {
+                i++;
+                Console.WriteLine(item);
+            }
+           
+            Console.WriteLine(i);
         }
+       
     }
 }
 
